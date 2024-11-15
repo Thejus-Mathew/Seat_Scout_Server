@@ -15,7 +15,7 @@ const adminSchema = mongoose.Schema({
         required:true
     },
     movies:{
-        type:"Array"
+        type:[Object]
     },
     phone:{
         type:"String"

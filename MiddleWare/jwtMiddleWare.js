@@ -1,7 +1,7 @@
 const jsonwebtoken = require('jsonwebtoken')
 
 const jwtMiddleware = (req,res,next)=>{
-    try{
+    try{       
         const token = req.headers["authorization"].split(" ")[1]
         if(token){
             const jwtResponse = jsonwebtoken.verify(token,process.env.JWTsecret)
